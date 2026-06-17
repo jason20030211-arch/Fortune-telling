@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星寰命理 - 數位轉型下的命理系統與全方位服務平台</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Background Star Effect -->
+  <div class="stars-bg"></div>
+  <div class="nebula-bg"></div>
+
+  <!-- App Container -->
+  <div class="app-container">
+    <!-- Sidebar / Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">
+          <svg viewBox="0 0 100 100" class="logo-svg">
+            <circle cx="50" cy="50" r="40" stroke="url(#logo-grad)" stroke-width="2" fill="none" />
+            <path d="M50 10 L50 90 M10 50 L90 50" stroke="url(#logo-grad)" stroke-width="1" stroke-dasharray="2 2" />
+            <polygon points="50,25 58,42 75,50 58,58 50,75 42,58 25,50 42,42" fill="url(#logo-grad)"
+              class="star-pulse" />
+            <defs>
+              <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffd700" />
+                <stop offset="50%" stop-color="#8a2be2" />
+                <stop offset="100%" stop-color="#00fa9a" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-name">星寰命理</span>
+      </div>
+
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="home">
+          <svg class="nav-icon" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          首頁平台
+        </button>
+        <button class="nav-item" data-tab="astrology">
+          <svg class="nav-icon" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+          </svg>
+          星盤解碼
+        </button>
+        <button class="nav-item" data-tab="mbti">
+          <svg class="nav-icon" viewBox="0 0 24 24">
+            <path
+              d="M12 2c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l2.79-2.79C10.09 18.66 11.02 19 12 19c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" />
+          </svg>
+          心理自我探索
+        </button>
+        <button class="nav-item" data-tab="rituals">
+          <svg class="nav-icon" viewBox="0 0 24 24">
+            <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z" />
+          </svg>
+          數位祭祀求神
+        </button>
+        <button class="nav-item" data-tab="workshop">
+          <svg class="nav-icon" viewBox="0 0 24 24">
+            <path
+              d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L3.5 20.5c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l2.89-2.89C9.34 19.66 10.63 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" />
+          </svg>
+          能量水晶工坊
+        </button>
+        <button class="nav-item" data-tab="academy">
+          <svg class="nav-icon" viewBox="0 0 24 24">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.49 12.03l6.51 3.55 6.51-3.55V14l-6.51 3.55L5.49 14v-1.97z" />
+          </svg>
+          命理教育學院
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>© 2026 星寰命理系統</p>
+        <small>跨界整合 東西數術 能量療癒</small>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Mobile Navigation Header -->
+      <header class="mobile-header">
+        <div class="mobile-logo-wrap">
+          <svg viewBox="0 0 100 100" class="logo-svg mini">
+            <circle cx="50" cy="50" r="40" stroke="url(#logo-grad)" stroke-width="2" fill="none" />
+            <polygon points="50,25 58,42 75,50 58,58 50,75 42,58 25,50 42,42" fill="url(#logo-grad)" />
+          </svg>
+          <span class="brand-name">星寰命理</span>
+        </div>
+        <button class="menu-toggle" id="menuToggleBtn">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </button>
+      </header>
+
+      <!-- TAB: HOME -->
+      <section class="tab-content active" id="tab-home">
+        <div class="hero-section">
+          <div class="hero-info">
+            <div class="tagline">Digital Transformation of Astrology & Self-Discovery</div>
+            <h1 class="hero-title">數位轉型下的命理系統<br><span class="gradient-text">與全方位服務平台</span></h1>
+            <p class="hero-desc">
+              星寰命理整合了東方命格（紫微斗數、生肖地支）、西方占星（黃道十二宮）、新興探索工具（生命靈數、九宮能量數、MBTI）以及數位化傳統儀式（點燈祈福、擲筊求神），透過大數據分析與能量美學，將千年古老智慧化為現代自我成長的隨身導引。
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" onclick="switchTab('astrology')">立即解碼星盤</button>
+              <button class="btn btn-secondary" onclick="switchTab('rituals')">點燈擲筊祈福</button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="cosmic-compass">
+              <div class="compass-ring ring-1"></div>
+              <div class="compass-ring ring-2"></div>
+              <div class="compass-ring ring-3"></div>
+              <div class="constellation-glow"></div>
+              <div class="compass-core">
+                <svg viewBox="0 0 100 100" class="star-core">
+                  <polygon points="50,15 60,38 85,50 60,62 50,85 40,62 15,50 40,38" fill="#ffd700" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform Integration Highlights -->
+        <div class="section-title-wrap">
+          <h2 class="section-title">核心系統整合架構</h2>
+          <p class="section-subtitle">四大維度多维分析，解鎖生命深層密碼</p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="glass-card feat-card">
+            <div class="feat-icon-wrap icon-east">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-3.31 0-6-2.69-6-6 0-2.97 2.16-5.43 5-5.91V10h2V8.09c2.84.48 5 2.94 5 5.91 0 3.31-2.69 6-6 6z" />
+              </svg>
+            </div>
+            <h3>東方傳統體系</h3>
+            <p>融合地支生肖、二十八星宿、本命佛與精準紫微命盤，提供流年大運與宿命解析。</p>
+          </div>
+          <div class="glass-card feat-card">
+            <div class="feat-icon-wrap icon-west">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm0-4h-2V7h2v7z" />
+              </svg>
+            </div>
+            <h3>西方占星體系</h3>
+            <p>細分黃道十二宮、四象星座元素與三分類性格模式，掌握人格本質與流日能量運勢。</p>
+          </div>
+          <div class="glass-card feat-card">
+            <div class="feat-icon-wrap icon-num">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19.07 4.93l-1.41 1.41C19.1 7.79 20 9.79 20 12c0 4.42-3.58 8-8 8s-8-3.58-8-8c0-2.21.9-4.21 2.34-5.66L4.93 4.93C2.92 6.71 1.5 9.35 1.5 12c0 5.79 4.71 10.5 10.5 10.5S22.5 17.79 22.5 12c0-2.65-1.42-5.29-3.43-7.07zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" />
+              </svg>
+            </div>
+            <h3>新興自我探索</h3>
+            <p>計算生日生命靈數、尋找九宮缺數，並結合現代 MBTI 16型人格，打通古今心理探索之牆。</p>
+          </div>
+          <div class="glass-card feat-card">
+            <div class="feat-icon-wrap icon-energy">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+              </svg>
+            </div>
+            <h3>實體能量引導</h3>
+            <p>九宮缺數對應天然水晶，透過客製化互動手鍊模擬器，將虛擬分析落實於生活美學飾品。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: ASTROLOGY -->
+      <section class="tab-content" id="tab-astrology">
+        <div class="section-title-wrap text-center">
+          <h2 class="section-title">個人星盤大數據解碼</h2>
+          <p class="section-subtitle">輸入基本資訊，即時生成東西方命格統合解析報告</p>
+        </div>
+
+        <div class="astrology-workspace">
+          <!-- Input Form Panel -->
+          <div class="glass-card form-panel">
+            <div class="card-header">
+              <span class="card-title">命格輸入儀</span>
+            </div>
+            <form id="astroForm" class="astro-form" onsubmit="calculateAstrology(event)">
+              <div class="form-group">
+                <label for="userName">真實姓名</label>
+                <input type="text" id="userName" placeholder="請輸入姓名" required value="張曜宇">
+              </div>
+              <div class="form-group">
+                <label for="birthDate">西元生日</label>
+                <input type="date" id="birthDate" required value="1995-10-24">
+              </div>
+              <div class="form-group">
+                <label for="birthHour">出生時辰</label>
+                <select id="birthHour" required>
+                  <option value="0">子時 (23:00 - 00:59)</option>
+                  <option value="1">丑時 (01:00 - 02:59)</option>
+                  <option value="2">寅時 (03:00 - 04:59)</option>
+                  <option value="3">卯時 (05:00 - 06:59)</option>
+                  <option value="4">辰時 (07:00 - 08:59)</option>
+                  <option value="5">巳時 (09:00 - 10:59)</option>
+                  <option value="6">午時 (11:00 - 12:59)</option>
+                  <option value="7">未時 (13:00 - 14:59)</option>
+                  <option value="8">申時 (15:00 - 16:59)</option>
+                  <option value="9" selected>酉時 (17:00 - 18:59)</option>
+                  <option value="10">戌時 (19:00 - 20:59)</option>
+                  <option value="11">亥時 (21:00 - 22:59)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">開始星盤運算</button>
+            </form>
+          </div>
+
+          <!-- Report Dashboard (Initially Hidden, Shown after calc) -->
+          <div id="astroReport" class="report-panel" style="display:none;">
+            <div class="tab-subnav">
+              <button class="subtab-btn active" onclick="switchSubTab('summary')">統合摘要</button>
+              <button class="subtab-btn" onclick="switchSubTab('numerology')">生命靈數九宮</button>
+              <button class="subtab-btn" onclick="switchSubTab('western')">西洋星座宮位</button>
+              <button class="subtab-btn" onclick="switchSubTab('eastern')">生肖本命守護</button>
+              <button class="subtab-btn" onclick="switchSubTab('ziwei')">簡易紫微斗數</button>
+            </div>
+
+            <!-- SubTab: Summary -->
+            <div class="subtab-content active" id="subtab-summary">
+              <div class="summary-grid">
+                <div class="glass-card stat-card">
+                  <h4>生命靈數</h4>
+                  <div class="stat-value" id="res-num">--</div>
+                  <div class="stat-label" id="res-num-name">-- 號人</div>
+                </div>
+                <div class="glass-card stat-card">
+                  <h4>西洋星座</h4>
+                  <div class="stat-value" id="res-zodiac">--</div>
+                  <div class="stat-label" id="res-zodiac-attrs">--象 / --分類</div>
+                </div>
+                <div class="glass-card stat-card">
+                  <h4>生肖地支</h4>
+                  <div class="stat-value" id="res-animal">--</div>
+                  <div class="stat-label" id="res-branch">--宮 / 守護神: --</div>
+                </div>
+              </div>
+
+              <div class="glass-card text-block-card">
+                <h3><svg class="text-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                  </svg> 命格綜合分析</h3>
+                <p id="res-summary-text">請在左方輸入出生日期並計算以獲得您的綜合命格報告...</p>
+                <div class="report-actions">
+                  <button class="btn btn-secondary btn-sm" onclick="exportReport()">下載完整分析 PDF</button>
+                  <button class="btn btn-primary btn-sm" onclick="applyCrystalSuggestion()">直接套用水晶建議至手鍊工坊</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- SubTab: Numerology -->
+            <div class="subtab-content" id="subtab-numerology">
+              <div class="numerology-layout">
+                <div class="glass-card numerology-grid-card">
+                  <h3>九宮能量格</h3>
+                  <div class="grid-3x3" id="grid-3x3">
+                    <div class="grid-cell" data-num="4"><span class="cell-num">4</span><span class="cell-count"
+                        id="count-4">0</span></div>
+                    <div class="grid-cell" data-num="9"><span class="cell-num">9</span><span class="cell-count"
+                        id="count-9">0</span></div>
+                    <div class="grid-cell" data-num="2"><span class="cell-num">2</span><span class="cell-count"
+                        id="count-2">0</span></div>
+                    <div class="grid-cell" data-num="3"><span class="cell-num">3</span><span class="cell-count"
+                        id="count-3">0</span></div>
+                    <div class="grid-cell" data-num="5"><span class="cell-num">5</span><span class="cell-count"
+                        id="count-5">0</span></div>
+                    <div class="grid-cell" data-num="7"><span class="cell-num">7</span><span class="cell-count"
+                        id="count-7">0</span></div>
+                    <div class="grid-cell" data-num="8"><span class="cell-num">8</span><span class="cell-count"
+                        id="count-8">0</span></div>
+                    <div class="grid-cell" data-num="1"><span class="cell-num">1</span><span class="cell-count"
+                        id="count-1">0</span></div>
+                    <div class="grid-cell" data-num="6"><span class="cell-num">6</span><span class="cell-count"
+                        id="count-6">0</span></div>
+                  </div>
+                </div>
+                <div class="glass-card num-detail-card">
+                  <h3>靈數分析與九宮缺數</h3>
+                  <p><strong>生命主線：</strong><span id="num-path-desc">--</span></p>
+                  <p><strong>大師能量：</strong><span id="num-master-desc">--</span></p>
+                  <p><strong>缺數能量失衡：</strong><span id="num-missing-desc">--</span></p>
+                  <div class="energy-suggestion-box">
+                    <h4>能量引導建議</h4>
+                    <p>根據您的九宮缺數，建議補強以下水晶與色彩：</p>
+                    <div class="crystal-tag-wrap" id="num-crystal-tags">
+                      <!-- Dynamically added -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SubTab: Western -->
+            <div class="subtab-content" id="subtab-western">
+              <div class="zodiac-layout">
+                <div class="glass-card zodiac-wheel-card">
+                  <div class="zodiac-wheel-wrap">
+                    <div class="zodiac-wheel" id="zodiacWheel">
+                      <!-- Zodiac icons rotated -->
+                      <div class="wheel-sector sec-0">♈</div>
+                      <div class="wheel-sector sec-1">♉</div>
+                      <div class="wheel-sector sec-2">♊</div>
+                      <div class="wheel-sector sec-3">♋</div>
+                      <div class="wheel-sector sec-4">♌</div>
+                      <div class="wheel-sector sec-5">♍</div>
+                      <div class="wheel-sector sec-6">♎</div>
+                      <div class="wheel-sector sec-7">♏</div>
+                      <div class="wheel-sector sec-8">♐</div>
+                      <div class="wheel-sector sec-9">♑</div>
+                      <div class="wheel-sector sec-10">♒</div>
+                      <div class="wheel-sector sec-11">♓</div>
+                    </div>
+                    <div class="wheel-pointer">▼</div>
+                  </div>
+                </div>
+                <div class="glass-card zodiac-detail-card">
+                  <h3 id="res-zodiac-title">白羊座 ♈</h3>
+                  <div class="badge-group">
+                    <span class="badge badge-fire" id="res-zodiac-element">火象星座</span>
+                    <span class="badge badge-cardinal" id="res-zodiac-mode">本位星座</span>
+                    <span class="badge badge-yin" id="res-zodiac-polarity">陽性極性</span>
+                  </div>
+                  <p class="zodiac-p" id="res-zodiac-desc">星座特質解說...</p>
+                  <div class="divider"></div>
+                  <h4>巴比倫天文宮位溯源</h4>
+                  <p class="zodiac-p font-small">
+                    起源於巴比倫，以「春分點」為起點平均劃分360度為12等分，代表太陽經過黃道的路徑。雖然天體星座因歲差移動，但占星學星宮與節氣相連，無歲差問題。其核心原則為「如其在上，如其在下」，體現了宇宙運轉與人性的和諧對應。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- SubTab: Eastern -->
+            <div class="subtab-content" id="subtab-eastern">
+              <div class="eastern-layout">
+                <div class="glass-card eastern-info-card">
+                  <h3 id="res-animal-title">生肖：屬鼠 🐭</h3>
+                  <p><strong>地支對應：</strong><span id="res-eastern-branch">子宮</span></p>
+                  <p><strong>星宿歸屬：</strong><span id="res-eastern-star">女、虛、危宿</span></p>
+                  <p><strong>生肖特質：</strong><span id="res-animal-desc">生肖特質解說...</span></p>
+                </div>
+                <div class="glass-card eastern-gods-card">
+                  <h3>護法本尊與守護星君</h3>
+                  <div class="god-badge-row">
+                    <div class="god-card">
+                      <div class="god-title">佛教本命佛</div>
+                      <div class="god-name" id="res-buddha-name">千手觀音</div>
+                      <p class="god-desc" id="res-buddha-desc">大悲千手觀音能保佑您消災免難、事事順遂。</p>
+                    </div>
+                    <div class="god-card">
+                      <div class="god-title">道教太歲星君</div>
+                      <div class="god-name" id="res-taishui-name">本命太歲</div>
+                      <p class="god-desc">主掌個人本命年的禍福，年歲轉換時宜安奉太歲求平安。</p>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <small>※ 備註：在八字命理中，生肖的界定是以「立春」節氣為準，而非大年初一。此系統已為您精準換算。</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- SubTab: Ziwei -->
+            <div class="subtab-content" id="subtab-ziwei">
+              <div class="glass-card ziwei-chart-card">
+                <h3>紫微命盤排盤 (簡易十二宮)</h3>
+                <p class="font-small">根據您的生辰排定之十二宮主星分佈，代表人生不同面向：</p>
+                <div class="ziwei-grid" id="ziweiGrid">
+                  <!-- 12 cells mapped out traditionally in clockwise loop -->
+                  <!-- Will be generated by JS -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: MBTI -->
+      <section class="tab-content" id="tab-mbti">
+        <div class="section-title-wrap text-center">
+          <h2 class="section-title">人格自我探索測驗</h2>
+          <p class="section-subtitle">融合古代數字能量與現代心理學 MBTI 測驗，探索您的內在人格潛力</p>
+        </div>
+
+        <div class="mbti-container">
+          <!-- Quiz Start Page -->
+          <div class="glass-card quiz-start-card" id="mbti-start">
+            <h3>準備開啟自我探索旅程嗎？</h3>
+            <p>本測驗包含 8 題精簡題目，能精準剖析您的能量特質與 MBTI 人格屬性，並會結合您的生命靈數與星座進行綜合解析，幫助您尋找生命盲點與補強方案。</p>
+            <button class="btn btn-primary" onclick="startMbtiQuiz()">開始人格探索</button>
+          </div>
+
+          <!-- Quiz Question Card -->
+          <div class="glass-card quiz-card" id="mbti-quiz" style="display:none;">
+            <div class="quiz-progress">
+              <span id="quiz-progress-text">問題 1 / 8</span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" id="quiz-progress-bar" style="width: 12.5%;"></div>
+              </div>
+            </div>
+            <h4 class="quiz-question" id="quiz-question-text">在社交聚會中，你通常會：</h4>
+            <div class="quiz-options" id="quiz-options-container">
+              <!-- Dynamically populated options -->
+            </div>
+          </div>
+
+          <!-- Quiz Result Page -->
+          <div class="glass-card quiz-result-card" id="mbti-result" style="display:none;">
+            <div class="result-header">
+              <div class="result-badge-wrap">
+                <span class="mbti-type-badge" id="mbti-result-type">INFJ</span>
+              </div>
+              <h3 id="mbti-result-title">諮商師 - 追求完美的理想主義者</h3>
+            </div>
+            <div class="divider"></div>
+            <div class="result-body">
+              <div class="result-desc">
+                <h4>人格特質</h4>
+                <p id="mbti-result-desc">人格描述文案載入中...</p>
+              </div>
+              <div class="result-desc">
+                <h4>古今跨界融合：心理靈數導引</h4>
+                <p id="mbti-fusion-desc">結合您的 MBTI 與生命靈數，我們發現您的生命課題在於...</p>
+              </div>
+              <div class="energy-suggestion-box">
+                <h4>水晶能量防護建議</h4>
+                <p id="mbti-crystal-desc">建議配戴藍色系水晶（如青金石）以提升表達力，平衡心靈能量。</p>
+                <button class="btn btn-primary btn-sm" onclick="switchTab('workshop')">前往能量工坊定做手鍊</button>
+              </div>
+            </div>
+            <div class="report-actions text-center">
+              <button class="btn btn-secondary" onclick="restartMbtiQuiz()">重新測驗</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: RITUALS -->
+      <section class="tab-content" id="tab-rituals">
+        <div class="section-title-wrap text-center">
+          <h2 class="section-title">數位信仰與祈福儀式</h2>
+          <p class="section-subtitle">透過數位化點燈祈福與 3D 擲筊請神，為心靈找到安定的力量</p>
+        </div>
+
+        <div class="rituals-container">
+          <!-- Left: Divination Blocks -->
+          <div class="glass-card ritual-card">
+            <h3>擲筊請神儀式</h3>
+            <p class="font-small">心中默念所求之事，如「信士某某某，想請問關於事業...是否可行」，點擊擲筊，讓神明為您解答。</p>
+
+            <div class="divination-stage">
+              <div class="jiaobei-container">
+                <!-- Left Block -->
+                <div class="jiaobei-wrapper" id="jiaobei-left">
+                  <div class="jiaobei">
+                    <div class="jiaobei-face convex"></div>
+                    <div class="jiaobei-face flat"></div>
+                  </div>
+                </div>
+                <!-- Right Block -->
+                <div class="jiaobei-wrapper" id="jiaobei-right">
+                  <div class="jiaobei">
+                    <div class="jiaobei-face convex"></div>
+                    <div class="jiaobei-face flat"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="divination-glow-effect" id="divinationGlow"></div>
+            </div>
+
+            <div class="divination-dashboard">
+              <div class="consecutive-counter">連續聖筊：<span id="shengJiaoCount">0</span></div>
+              <div class="divination-result-text" id="divinationResult">請點擊下方按鈕進行擲筊</div>
+              <div class="divination-expl" id="divinationExpl">※ 聖筊（一正一反 - 同意）；笑筊（雙平朝上 - 神明笑而不答或不清）；陰筊（雙凸朝上 - 不同意）。
+              </div>
+              <button class="btn btn-primary btn-block" onclick="tossJiaobei()">擲筊請示</button>
+              <button class="btn btn-secondary btn-block btn-sm" onclick="resetJiaobei()">重置計數</button>
+            </div>
+          </div>
+
+          <!-- Right: Candle Lighting -->
+          <div class="glass-card ritual-card">
+            <h3>數位點燈祈福</h3>
+            <p class="font-small">選擇適合您的福燈，輸入姓名與心願，於「萬盞燈牆」中點亮專屬的祈福明燈。</p>
+
+            <form id="lightingForm" class="lighting-form" onsubmit="lightCandle(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="lightName">信士姓名</label>
+                  <input type="text" id="lightName" placeholder="請輸入姓名" required>
+                </div>
+                <div class="form-group">
+                  <label for="lightType">祈福燈類</label>
+                  <select id="lightType" required>
+                    <option value="光明燈">光明燈 (消災解厄、前途光明)</option>
+                    <option value="太歲燈">安太歲 (趨吉避凶、值年平安)</option>
+                    <option value="財神燈">求財燈 (財源廣進、事業發達)</option>
+                    <option value="姻緣燈">姻緣燈 (桃花滿滿、琴瑟和鳴)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="lightWish">祈願心願</label>
+                <input type="text" id="lightWish" placeholder="例如：事業順利，身體健康" required>
+              </div>
+              <button type="submit" class="btn btn-secondary btn-block">點亮祈福燈</button>
+            </form>
+
+            <div class="lamp-wall-container">
+              <h4>千祥萬盞祈福燈牆</h4>
+              <div class="lamp-wall" id="lampWall">
+                <!-- Dynamically generated lighted lamps -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: WORKSHOP -->
+      <section class="tab-content" id="tab-workshop">
+        <div class="section-title-wrap text-center">
+          <h2 class="section-title">能量水晶工坊</h2>
+
+        </div>
+
+        <div class="workshop-container">
+          <!-- Left: Bracelet Editor Canvas -->
+          <div class="glass-card bracelet-editor-card">
+            <h3>互動式手鍊客製模擬器</h3>
+            <p class="font-small">點選下方天然水晶石，再點選右側手鍊上的珠子進行替換；或點擊下方「快速配置」按鈕。</p>
+
+            <div class="bracelet-visualizer">
+              <svg viewBox="0 0 400 400" id="braceletSvg" class="bracelet-svg">
+                <!-- Outer ring shadow -->
+                <circle cx="200" cy="200" r="130" stroke="rgba(255, 215, 0, 0.05)" stroke-width="8" fill="none" />
+                <circle cx="200" cy="200" r="130" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" fill="none" />
+
+                <!-- Beads placeholders generated by JS -->
+                <g id="beadsContainer"></g>
+
+                <!-- Center Display Info -->
+                <g transform="translate(200, 200)">
+                  <circle cx="0" cy="0" r="70" fill="rgba(10, 8, 19, 0.85)" stroke="rgba(138, 43, 226, 0.2)"
+                    stroke-width="2" />
+                  <text x="0" y="-15" text-anchor="middle" fill="#ffd700" font-size="12" font-family="Outfit"
+                    font-weight="bold" letter-spacing="1">ENERGY RING</text>
+                  <text x="0" y="10" text-anchor="middle" fill="#ffffff" font-size="14" id="bracelet-bead-count"
+                    font-weight="bold">18 顆水晶珠</text>
+                  <text x="0" y="30" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="10">點擊珠子進行編輯</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="bracelet-quick-configs">
+              <button class="btn btn-secondary btn-sm" onclick="quickFillBracelet('wealth')">招財能量配置 (黃水晶+綠幽靈)</button>
+              <button class="btn btn-secondary btn-sm" onclick="quickFillBracelet('love')">桃花桃花配置 (粉晶+紫水晶)</button>
+              <button class="btn btn-secondary btn-sm" onclick="quickFillBracelet('missing')">九宮補能配置 (自動依缺數填充)</button>
+            </div>
+
+            <div class="bead-palette-wrap">
+              <h4>可供選擇的天然水晶石：</h4>
+              <div class="bead-palette" id="beadPalette">
+                <!-- Generated by JS with colors and properties -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Details & Request Form -->
+          <div class="glass-card bracelet-info-card">
+            <h3>能量平衡分析與需求單</h3>
+
+            <div class="energy-radar-section">
+              <h4>目前手鍊能量比重</h4>
+              <div class="energy-bars" id="energyBars">
+                <div class="energy-bar-row">
+                  <span class="energy-label">招財運勢 (黃/綠)</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" id="bar-wealth" style="width: 25%;"></div>
+                  </div>
+                  <span class="bar-percent" id="pct-wealth">25%</span>
+                </div>
+                <div class="energy-bar-row">
+                  <span class="energy-label">桃花姻緣 (粉/紫)</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" id="bar-love" style="width: 25%;"></div>
+                  </div>
+                  <span class="bar-percent" id="pct-love">25%</span>
+                </div>
+                <div class="energy-bar-row">
+                  <span class="energy-label">健康保平安 (白/黑/紅)</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" id="bar-health" style="width: 25%;"></div>
+                  </div>
+                  <span class="bar-percent" id="pct-health-val">25%</span>
+                </div>
+                <div class="energy-bar-row">
+                  <span class="energy-label">心靈與直覺 (藍/青)</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" id="bar-spirit" style="width: 25%;"></div>
+                  </div>
+                  <span class="bar-percent" id="pct-spirit">25%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+
+
+            <!-- TAB: ACADEMY -->
+            <section class="tab-content" id="tab-academy">
+              <div class="section-title-wrap text-center">
+                <h2 class="section-title">命理教育與專題文章</h2>
+                <p class="section-subtitle">打破迷信，將古老曆法與心理學體系化，傳播正確的自我認知學問</p>
+              </div>
+
+              <!-- Carousel / Grid Articles -->
+              <h3 class="subsection-title">命理專欄文章</h3>
+              <div class="grid grid-3" id="articlesGrid">
+                <!-- Dynamically populated from data.js -->
+              </div>
+
+              <div class="divider section-divider"></div>
+
+              <!-- Online Courses -->
+              <h3 class="subsection-title">系統化線上培訓課程</h3>
+              <div class="grid grid-3" id="coursesGrid">
+                <!-- Dynamically populated from data.js -->
+              </div>
+            </section>
+
+            <!-- TAB: CONSULTING -->
+
+          </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="appToast">預設通知</div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/astrology.js"></script>
+  <script src="js/rituals.js"></script>
+  <script src="js/bracelet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
